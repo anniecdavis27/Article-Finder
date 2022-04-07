@@ -25,7 +25,7 @@ function App() {
   // react hooks
   const [data, setData] = useState();
   const [propId, setPropId] = useState("");
-  const [selectedArticles, setSelectedArticles] = useState([])
+  const [selectedArticles, setSelectedArticles] = useState([]);
 
   // function to pull page data
   useEffect(() => {
@@ -85,7 +85,7 @@ function App() {
         }
       }
 
-      setSelectedArticles(selectArticles)
+      setSelectedArticles(selectArticles);
     }
   };
 
@@ -100,10 +100,10 @@ function App() {
           onChange={handleChange}
           id="findReceipt"
         />
-        <br />
-        <input type="submit" className="submit" />
+        <button type="submit" className="submit lightbutton">
+          <p className='buttontext'>Search</p>
+        </button>
       </form>
-      <h2>Article results for property {propId}:</h2>
       <ul>
         {selectedArticles.map((item) => {
           return (
